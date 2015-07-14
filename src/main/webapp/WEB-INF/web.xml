@@ -4,13 +4,24 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <display-name>HelloWorldServlet</display-name>
-        <servlet-name>HelloWorldServlet</servlet-name>
+        <display-name>Default</display-name>
+        <servlet-name>Default</servlet-name>
         <servlet-class>main.java.HelloWorld</servlet-class>
     </servlet>
 
+    <servlet>
+        <display-name>PostServlet</display-name>
+        <servlet-name>PostServlet</servlet-name>
+        <servlet-class>main.java.User</servlet-class>
+    </servlet>
+
     <servlet-mapping>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <servlet-name>Default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PostServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
     </servlet-mapping>
 </web-app>
